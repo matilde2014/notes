@@ -1,11 +1,22 @@
 require 'spec_helper'
 
-describe "Students" do
-  describe "GET /students" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get students_path
-      response.status.should be(200)
+describe "Students pages", :type => :feature  do
+  subject { page }
+
+  describe "student creation" do
+    before { visit new_student_path }
+
+    describe "with invalid information" do
+
+      it "should not create a student" do
+        expect { click_button "Create Student" }.not_to change(Student, :count)
+      end
+
+      it "should not create a student" do
+        click_button "Create Student"
+        should have_content("Name can't be blank")
+      end
+
     end
   end
 end
