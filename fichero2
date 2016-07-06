@@ -1,0 +1,152 @@
+    1  cd /etc/
+    2  ls
+    3  cd default/
+    4  ls
+    5  gedit grub 
+    6  cd /boot/
+    7  ls
+    8  cd grub/
+    9  ls
+   10  gedit grub.cfg 
+   11  exit
+   12  kile
+   13  sudo apt install kile
+   14  kile
+   15  ./kile
+   16  kile
+   17  exit
+   18  kile
+   19  sudo apt install kile
+   20  rubymine
+   21  kile
+   22  sudo apt install kile
+   23  sudo apt-get update
+   24  pwd
+   25  cd Documentos/
+   26  mkdir rails_projects
+   27  cd rails_projects/
+   28  ls
+   29  git
+   30  sudo apt install git
+   31  sudo apt-get install git
+   32  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+   33  \curl -sSL https://get.rvm.io | bash -s stable
+   34  rvm
+   35  rvm list
+   36  rvm rubies
+   37  rvm --version
+   38  rvm list --help
+   39  rvm list remote
+   40  rvm install
+   41  rvm list know
+   42  rvm list known
+   43  rvm list known | less
+   44  rvm install 2.3.0
+   45  rvm install 2.3
+   46  rvm install 2.3.0
+   47  ruby -v
+   48  sudo apt-get install git
+   49  git clone http://github.com/RaulAlcaniz/Pfc.git
+   50  h
+   51  history
+   52  history > fich
+   53  ls
+   54  mv Pfc/ Documentos/rails_projects/
+   55  cd Documentos/rails_projects/
+   56  ls
+   57  rvm ruby list
+   58  rvm list
+   59  rvm use 2.3.0@pfc --create
+   60  cd ..
+   61  cd notes
+   62  rvm current
+   63  cd ..
+   64  cd notes
+   65  rvm current
+   66  cd ..
+   67  cd notes
+   68  rvm current
+   69  rvm list
+   70  bundle install --without production
+   71  bundle install
+   72  bundle install
+   73  rails generate rspec:install
+   74  sudo apt-get install nodejs
+   75  rails generate rspec:install
+   76  gem list capybara
+   77  bundle install
+   78  cp config/database.yml  config/database.yml.example
+   79  git init
+   80  git status
+   81  git add .
+   82  git status
+   83  git mv README.rdoc README.md
+   84  cd Documentos/rails_projects/
+   85  rvm use 2.3.0@pfc --create
+   86  gem install rails --version 4.2.6
+   87  rails new notes -T 
+   88  cd notes
+   89  ls
+   90  cd
+   91  cd Down
+   92  cd Descargas/
+   93  ls
+   94  cd
+   95  mkdir bin
+   96  bin/RubyMine-2016.1.2/bin/rubymine.sh 
+   97  history
+   98  ls
+   99  history > fichero
+  100  ls
+  101  cat fichero
+  102  history
+  103  ruby -v
+  104  rvm ruby list
+  105  rvm current
+  106  history
+  107  pwd
+  108  ls
+  109  cd bin
+  110  ls
+  111  cd RubyMine-2016.1.2/
+  112  ls
+  113  cd rp
+  114  ls
+  115  cd rb
+  116  ls
+  117  cd ..
+  118  ls
+  119  cd bin
+  120  ls
+  121  rubymine
+  122  ls
+  123  ls -a
+  124  ls -l
+  125  rubymine.sh
+  126  rubymine
+  127  ls
+  128  pwd
+  129  rubymine
+  130  ls -l
+  131  sh rubymine.sh 
+  132  ls
+  133  cd Documentos/
+  134  ls
+  135  cd rails_projects/
+  136  ls
+  137  rm -rf notes/
+  138  git clone https://github.com/matilde2014/notes.git
+  139  rvm install 2.2.4
+  140  cd notes
+  141  rvm current
+  142  gem install bundle
+  143  bundle install --without production
+  144  rspec spec/requests/
+  145  find -name *data*
+  146  git pull origin
+  147  cp config/database.yml.example config/database.yml
+  148  rake db:migrate && rake db:test:prepare
+  149  rspec spec/requests/
+  150  rspec spec/controllers/
+  151  rspec spec/models/
+  152  history > fichero2
