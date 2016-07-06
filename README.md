@@ -17,7 +17,7 @@ $ rake db:migrate && rake db:test:prepare
 $ rspec spec/
 ```
 
-##Lunes 4 de Julio
+##1. Lunes 4 de Julio
 ### Pedir documentaión para ampliar el plazo el proyecto
 
 ###Instalación del Kile
@@ -36,6 +36,7 @@ cd rails_projects/
 rails generate scaffold students phone_number:string name:string birth_date:date
 
 ###Instalación del git
+sudo apt-get install git
 
 ###Se va a utilizar la metodología TDD
 ###Fichero Gemfile
@@ -43,9 +44,6 @@ Se ha modificado algunas cosas como capybara y rspec. Respecto a rspec el ficher
 
 ###Se ha subido el proyecto a github
 
-###Copiado el proyecto de Raul
-sudo apt-get install git
-git clone http://github.com/RaulAlcaniz/Pfc.git
 
 ###Añadido cosas al fichero .gitignore
 
@@ -59,9 +57,7 @@ rvm current
 history
 bundle install --without production
 
-##Martes 5 de julio
-
-
+##2. Martes 5 de julio
 
 ###Para probar los test que ha generado en el fichero students_controller_spec.rb
 rspec spec/controllers/
@@ -69,19 +65,21 @@ rspec spec/controllers/
 ###Bajado la versión porque teníamos problemas en el spec con scaffold
 
 
-###Mirar mejor otro proyecto 	
-	https://github.com/railstutorial/sample_app_rails₄
+###Proyectos que es interesnte mirar
+	https://github.com/railstutorial/sample_app_rails_4
+	https://github.com/RaulAlcaniz/Pfc
 
 ###Subir los cambios al proyecto
 git add .
 git commit -a -m "RSpec with errors"
 git push origin master
 
+###Bajar el proyecto
+git clone https://github.com/matilde2014/notes.git
+
 ###SPEC que hay que tocar
-  	rspec spec/requests/
-  	rspec spec/controllers/
-  	rspec spec/models/
+rspec spec/request/
+rspec spec/contollers
+rspec spec/models/
 
-
-
-##Miercoles 6 de Julio
+##3. Miercoles 6 de Julio
