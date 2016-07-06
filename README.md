@@ -79,7 +79,9 @@ git clone https://github.com/matilde2014/notes.git
 
 ###SPEC que hay que tocar
 rspec spec/request/
+
 rspec spec/contollers/
+
 rspec spec/models/
 
 
@@ -87,7 +89,9 @@ rspec spec/models/
 Revisar la documentación y modificar los spec
 
 Test Unitario
+
 Test Controllador
+
 Test Modelo
 
 Test Comportamiento
@@ -100,10 +104,15 @@ A veces al ejecutar el rspec nos da un error y tenemos que ejecutar esto:
 ###Añadir un campo a la tabla de niff
 
 1)rails g migration addNifToStudents
+
 2)Modificar el fichero del migrate
+
 3)http://edgeguides.rubyonrails.org/active_record_migrations.html
+
 4)Hacer la migración:rake db:migrate && rake db:test:prepare
+
 5)Seguidamente hay que hacer cambios en la vista y en el controlador
+
 
 
  
