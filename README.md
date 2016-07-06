@@ -61,27 +61,27 @@ bundle install --without production
 
 ##Martes 5 de julio
 
+
+
+###Para probar los test que ha generado en el fichero students_controller_spec.rb
+rspec spec/controllers/
+
+###Bajado la versión porque teníamos problemas en el spec con scaffold
+
+
+###Mirar mejor otro proyecto 	
+	https://github.com/railstutorial/sample_app_rails₄
+
 ###Subir los cambios al proyecto
 git add .
 git commit -a -m "RSpec with errors"
 git push origin master
 
-###Para probar los test que ha generado en el fichero students_controller_spec.rb
-rspec spec/controllers/
-
-Bajado la versión porque teníamos problemas en el spec con scaffold
-
-Mirar mejor otro proyecto 	
-	https://github.com/railstutorial/sample_app_rails₄
-
-Pasos para subir un proyecto o bajarlo
-
-SPEC que hay que tocar
+###SPEC que hay que tocar
   	rspec spec/requests/
   	rspec spec/controllers/
   	rspec spec/models/
 
-cp config/database.yml.example config/database.yml
-rake db:migrate && rake db:test:prepare
 
-Miercoles 6 de Julio
+
+##Miercoles 6 de Julio
