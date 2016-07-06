@@ -16,4 +16,10 @@ describe Student, :type => :feature do
     before { @student.name = " " }
     it { should_not be_valid }
   end
+
+  describe "when date is not present" do
+    before { @student.birthday = " " }
+    it { should_not be_valid }
+  end
+
 end
