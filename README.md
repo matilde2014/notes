@@ -147,8 +147,12 @@ https://toolbelt.heroku.com/debian
 heroku login
 
 heroku create
+
 git push heroku master
+
 heroku run rake db:migrate
+
 heroku open
+
 
  
