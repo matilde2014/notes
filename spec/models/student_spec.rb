@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Student, :type => :feature do
+describe Student do
 
   before do
     @student = Student.new(name: 'Example User', birthday: '01/01/1970', nif: '44703488k')

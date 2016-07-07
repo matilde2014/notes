@@ -118,8 +118,28 @@ A veces al ejecutar el rspec nos da un error y tenemos que ejecutar esto:
 
 ##4. Jueves 7 de Julio
 
+###Crear la tabla curso
+rails g scaffold courses name:string
+
+###Hacer los test de la tabla que acabamos de crear
+SPEC - models y como consecuencia en APP- models
+SPEC - requests y como consecuencia en APP - models
+SPEC - controllers
+
+Borrar la tablar curso
+rails destroy scaffold courses
+
+Generar la tabla asignatura
+rails g scaffold subjects name:string hours:integer 
+rake db:migrate && rake db:test:prepare
+
+SPEC - models y como consecuencia en APP- models
+SPEC - requests y como consecuencia en APP - models
+SPEC - controllers
+
 ###Añadir campos a la tabla alumno
-###Crear la tabla profesor 
+
+
 ###Crear una relación entre tablas 1 - N
 ###Crear cuenta en Heroku
 

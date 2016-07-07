@@ -1,4 +1,6 @@
 Notes::Application.routes.draw do
+  resources :subjects
+
   resources :students
 
   # The priority is based upon order of creation: first created -> highest priority.
