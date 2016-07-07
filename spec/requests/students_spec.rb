@@ -15,8 +15,29 @@ describe "Students pages", :type => :feature  do
       it "should not create a student" do
         click_button "Create Student"
         should have_content("Name can't be blank")
+        should have_content("Nif can't be blank")
+      end
+    end
+
+    describe "with valid information" do
+
+      before do
+        fill_in 'Name', with: "Juan Ruiz"
+        #fill_in 'Birthday', with: "01/01/1970"
+        fill_in 'Nif', with: "12345678A"
       end
 
+      it "should create a student" do
+        expect { click_button "Create Student" }.to change(Student, :count).by(1)
+      end
+
+      it "should show valid information" do
+        click_button "Create Student"
+        should have_content("Juan Ruiz")
+        should have_content("12345678A")
+        should have_content("Student was successfully created")
+      end
     end
+
   end
 end

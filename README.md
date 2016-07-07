@@ -71,8 +71,11 @@ rspec spec/controllers/
 
 ###Subir los cambios al proyecto
 git add .
+
 git commit -a -m "RSpec with errors"
+
 git push origin master
+
 
 ###Bajar el proyecto
 git clone https://github.com/matilde2014/notes.git
@@ -101,7 +104,7 @@ A veces al ejecutar el rspec nos da un error y tenemos que ejecutar esto:
  cd notes
  rvm current
  
-###Añadir un campo a la tabla de niff
+###Añadir un campo a la tabla de nif
 
 1)rails g migration addNifToStudents
 
@@ -112,6 +115,13 @@ A veces al ejecutar el rspec nos da un error y tenemos que ejecutar esto:
 4)Hacer la migración:rake db:migrate && rake db:test:prepare
 
 5)Seguidamente hay que hacer cambios en la vista y en el controlador
+
+##4. Jueves 7 de Julio
+
+###Añadir campos a la tabla alumno
+###Crear la tabla profesor 
+###Crear una relación entre tablas 1 - N
+###Crear cuenta en Heroku
 
 
 
