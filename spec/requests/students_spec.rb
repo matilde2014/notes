@@ -4,7 +4,18 @@ describe "Students pages", :type => :feature  do
   subject { page }
 
   describe "student creation" do
+    before do
+      visit new_user_registration_path
+      fill_in "Email", with: "juan.ruiz@example.com"
+      fill_in "Password", with: "password"
+      fill_in "Password confirmation", with: "password"
+      click_button "Sign up"
+    end
+
+
+
     before { visit new_student_path }
+
 
     describe "with invalid information" do
 

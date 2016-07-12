@@ -142,11 +142,16 @@ SPEC - controllers
 
 ###Crear una relación entre tablas 1 - N
 ###Crear cuenta en Heroku
-ls
+
 https://toolbelt.heroku.com/debian
+
+Esto solo se hace una vez
+
 heroku login
 
 heroku create
+
+Esto las siguientes veces
 
 git push heroku master
 
@@ -154,5 +159,8 @@ heroku run rake db:migrate
 
 heroku open
 
+###Usuarios
+
+save_and_open_page
 
  

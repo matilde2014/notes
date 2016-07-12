@@ -1,4 +1,5 @@
 Notes::Application.routes.draw do
+  devise_for :users
   resources :subjects
 
   resources :students
