@@ -1,17 +1,21 @@
 require 'spec_helper'
 
 describe "Subjects", :type => :feature  do
-  describe "GET /subjects" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get subjects_path
-      response.status.should be(200)
-    end
+
+
+  before do
+    visit new_user_registration_path
+    fill_in "Email", with: "juan.ruiz@example.com"
+    fill_in "Password", with: "password"
+    fill_in "Password confirmation", with: "password"
+    click_button "Sign up"
   end
 
   subject { page }
 
   describe "subject creation" do
+
+
     before { visit new_subject_path }
 
     describe "with invalid information" do

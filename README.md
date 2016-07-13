@@ -85,9 +85,6 @@ rspec spec/request/
 
 rspec spec/contollers/
 
-rspec spec/models/
-
-
 ##3. Miercoles 6 de Julio
 Revisar la documentación y modificar los spec
 
@@ -159,8 +156,43 @@ heroku run rake db:migrate
 
 heroku open
 
+El nombre de la aplicación será este:
+
+https://limitless-waters-13812.herokuapp.com/
+
+
 ###Usuarios
 
 save_and_open_page
 
+##5. Martes 12 de Julio
+
+### Recordar lo que hicimos con el device
+
+Añadir gema 
+gem 'devise'
+
+Seguidamente:
+
+bundle install
+
+rails generate devise:install
+
+rails server
+
+rails generate devise User
+
+rake db:migrate
+
+Ahora en app -controllers - aplication_controller esta: 
+before_action :authenticate_user!
+
+En models esta:
+user.rb
+
+Y en routes esta:
+devise_for :users
+
+
+### Crear otra trabla y hacer las relaciones entre las tablas
  

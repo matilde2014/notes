@@ -5,5 +5,5 @@ class ApplicationController < ActionController::Base
 
   #To set up a controller with user authentication,
   # just add this before_action (assuming your devise model is 'User')
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 end
