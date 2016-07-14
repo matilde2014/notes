@@ -46,10 +46,7 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     # c.syntax = :should
   end
-
-  config.include FactoryGirl::Syntax::Methods
-
-  config.before(:suite) do
-    FactoryGirl.find_definitions
-  end
 end
+
+
+
