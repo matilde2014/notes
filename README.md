@@ -194,5 +194,22 @@ Y en routes esta:
 devise_for :users
 
 
-### Crear otra trabla y hacer las relaciones entre las tablas
+
+##5. Miércoles 13 de Julio
+
+Mejorar el spec request
+
+Añadir la tabla de marks
+
+Al añadir una tabla hay que realizar los siguientes cambios:
+Modificar el spec del modelo
+Modificar el spec del request
+
+##6. Jueves 14 de Julio
+Activación e Rubymine
+Actualizar el diagrama E-R y añadir tabla de horario
+
+
+
+
  

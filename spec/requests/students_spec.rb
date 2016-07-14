@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe "Students pages", :type => :feature  do
-  subject { page }
 
   describe "student creation" do
     before do
@@ -12,7 +11,7 @@ describe "Students pages", :type => :feature  do
       click_button "Sign up"
     end
 
-
+    subject { page }
 
     before { visit new_student_path }
 

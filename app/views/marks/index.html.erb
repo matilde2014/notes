@@ -1,0 +1,31 @@
+<h1>Listing marks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+      <th>Mdate</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @marks.each do |mark| %>
+      <tr>
+        <td><%= mark.value %></td>
+        <td><%= mark.description %></td>
+        <td><%= mark.mdate %></td>
+        <td><%= link_to 'Show', mark %></td>
+        <td><%= link_to 'Edit', edit_mark_path(mark) %></td>
+        <td><%= link_to 'Destroy', mark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mark', new_mark_path %>
