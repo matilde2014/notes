@@ -12,6 +12,9 @@ describe Subject do
   it { should respond_to(:name) }
   it { should respond_to(:hours) }
 
+  it { should respond_to(:marks) }
+  it { should respond_to(:students) }
+
   describe "when name is not present" do
     before { @subject.name = " " }
     it { should_not be_valid }

@@ -13,6 +13,9 @@ describe Student do
   it { should respond_to(:birthday) }
   it { should respond_to(:nif) }
 
+  it { should respond_to(:marks) }
+  it { should respond_to (:subjects)}
+
   describe "when name is not present" do
     before { @student.name = " " }
     it { should_not be_valid }

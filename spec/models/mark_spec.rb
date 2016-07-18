@@ -12,6 +12,9 @@ describe Mark do
   it { should respond_to(:description) }
   it { should respond_to(:mdate) }
 
+  it { should respond_to(:student) }
+  it { should respond_to(:subject) }
+
   describe "when value is not present" do
     before { @mark.value = " " }
     it { should_not be_valid }

@@ -153,7 +153,6 @@ Esto las siguientes veces
 git push heroku master
 
 heroku run rake db:migrate
-
 heroku open
 
 El nombre de la aplicación será este:
@@ -206,8 +205,45 @@ Modificar el spec del modelo
 Modificar el spec del request
 
 ##6. Jueves 14 de Julio
+
+Lograr que el factory girl rails funcione para ello he de mirar estos ficheros
+Gemfile
+gem 'factory_girl_rails'
+
+devise.rb
+
+spec_helper.rb
+
+aplication.rb
+
+factory_girl.rb
+
+factories/user.rb
+
 Activación e Rubymine
 Actualizar el diagrama E-R y añadir tabla de horario
+
+Cosas que se quedan pendientes hacer los cambios realizadoss en request/subject_spec.rb en los otros
+
+Añadir la tabla schedule
+
+Realizar cambios en la memoria
+
+Realice una relacion uno a muchos
+
+##7. Lunes 18 de Julio
+
+Repasar las cosas anteriores
+Mirar la relaciones que existen entre estudiante, subject y mark
+Mirar como rellenar lo de factories
+
+También hemos realizado una relación n-n entre subject y student
+
+Realizar pestañas de navegación
+
+
+
+
 
 
 
