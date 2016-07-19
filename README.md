@@ -68,6 +68,8 @@ rspec spec/controllers/
 ###Proyectos que es interesnte mirar
 	https://github.com/railstutorial/sample_app_rails_4
 	https://github.com/RaulAlcaniz/Pfc
+	http://calm-coast-85106.herokuapp.com/frontmatter
+	 
 
 ###Subir los cambios al proyecto
 git add .
@@ -241,7 +243,24 @@ También hemos realizado una relación n-n entre subject y student
 
 Realizar pestañas de navegación
 
+gemfile
+gem 'coffee-rails', '~> 4.0.0'
 
+//= require bootstrap
+custom.css.scss
+
+
+ /app/views/layouts/aplication.html.erb
+ cambiar el body
+ /app/views/layouts/_header.html.erb
+ copiar este fichero
+ 
+ En seeds.rb hemos puesto un usuario
+ 
+ ##7. Martes 19 de Julio
+ 
+ Intentar mirar la pestaña de navegación de home ver como arreglarla
+ 
 
 
 
