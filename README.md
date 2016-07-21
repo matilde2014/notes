@@ -277,6 +277,8 @@ custom.css.scss
  
  Revisar las restricciones anteriores
  y hacer lo mismo con los subjects
+ 
+ save_and_open_page
 
 
  

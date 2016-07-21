@@ -4,7 +4,8 @@ class SubjectsController < ApplicationController
   # GET /subjects
   # GET /subjects.json
   def index
-    @subjects = Subject.all
+    #@subjects = Subject.all
+    @subjects = Subject.where(user: current_user)
   end
 
   # GET /subjects/1
@@ -25,6 +26,7 @@ class SubjectsController < ApplicationController
   # POST /subjects.json
   def create
     @subject = Subject.new(subject_params)
+    @subject.user = current_user
 
     respond_to do |format|
       if @subject.save
@@ -65,6 +67,7 @@ class SubjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_subject
       @subject = Subject.find(params[:id])
+      redirect_to(root_url) unless current_user?(@subject.user)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

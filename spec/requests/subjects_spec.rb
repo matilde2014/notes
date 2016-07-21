@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Subjects", :type => :feature  do
+describe "Subjects pages", :type => :feature  do
 
   describe "subject creation" do
     let(:user) { FactoryGirl.create(:user) }
@@ -50,45 +50,45 @@ describe "Subjects", :type => :feature  do
 
   end
 
-  #describe 'access to students' do
+  describe 'access to subjects' do
 
-  #  let(:nosy) { FactoryGirl.create(:user, email: 'nosy@example.com') }
-  #  let(:teacher) { FactoryGirl.create(:user, email: 'teacher@example.com') }
-  #  let!(:student) { FactoryGirl.create(:student, user: teacher) }
+    let(:nosy) { FactoryGirl.create(:user, email: 'nosy@example.com') }
+    let(:teacher) { FactoryGirl.create(:user, email: 'teacher@example.com') }
+    let!(:course) { FactoryGirl.create(:subject, user: teacher) }
 
-  #  subject { page }
 
-  #  describe "with authorizarion" do
-  #    before do
-  #      login_as teacher
-  #      visit students_path
-  #    end
+    subject { page }
 
-  #    it 'shows student data' do
-  #      should have_content(student.name)
-  #    end
-  #  end
+    describe "with authorizarion" do
+      before do
+        login_as teacher
+        visit subjects_path
+      end
 
-   # describe "with non authorizarion" do
-   #   before do
-   #     login_as nosy
-   #   end
+      it 'shows subject data' do
+        should have_content(course.name)
+      end
+    end
 
-   #   it 'does not show student data' do
-   #     visit students_path
-   #     should_not have_content(student.name)
-   #   end
+    describe "with non authorizarion" do
+      before do
+        login_as nosy
+      end
 
-   #   it 'does not show student data' do
-   #     visit student_path(student)
-   #     should_not have_content(student.name)
-   #   end
+      it 'does not show subject data' do
+        visit subjects_path
+        should_not have_content(course.name)
+      end
 
-   #   it 'redirects to root url' do
-   #     visit student_path(student)
-   #     expect(current_url).to eql(root_url)
-   #   end
-   # end
+      it 'does not show subject data' do
+        visit subject_path(course)
+        should_not have_content(course.name)
+      end
 
-  #end
+       it 'redirects to root url' do
+         visit subject_path(course)
+         expect(current_url).to eql(root_url)
+       end
+    end
+  end
 end

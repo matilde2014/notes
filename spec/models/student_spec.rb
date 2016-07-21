@@ -15,7 +15,7 @@ describe Student do
 
   it { should respond_to(:marks) }
   it { should respond_to (:subjects)}
-  it { should respond_to (:user_id)}
+  it { should respond_to (:user)}
 
   describe "when user_id is not present" do
     before { @student.user_id = " " }

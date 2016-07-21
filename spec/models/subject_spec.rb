@@ -14,7 +14,7 @@ describe Subject do
 
   it { should respond_to(:marks) }
   it { should respond_to(:students) }
-  #it { should respond_to(:user_id) }
+  it { should respond_to(:user) }
 
 
   describe "when name is not present" do
@@ -27,9 +27,9 @@ describe Subject do
     it { should_not be_valid }
   end
 
-  #describe "when user_id is not present" do
-  #  before { @subject.user_id = " " }
-  #  it { should_not be_valid }
-  #end
+  describe "when user_id is not present" do
+    before { @subject.user_id = " " }
+    it { should_not be_valid }
+  end
 
 end

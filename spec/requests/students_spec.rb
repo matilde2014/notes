@@ -57,6 +57,7 @@ describe "Students pages", :type => :feature  do
     let(:teacher) { FactoryGirl.create(:user, email: 'teacher@example.com') }
     let!(:student) { FactoryGirl.create(:student, user: teacher) }
 
+
     subject { page }
 
     describe "with authorizarion" do
