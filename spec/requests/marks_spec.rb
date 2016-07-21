@@ -2,12 +2,17 @@ require 'spec_helper'
 
 describe "Marks", :type => :feature  do
 
+  let(:user) { FactoryGirl.create(:user) }
+
+  before do
+    login_as user
+  end
   subject { page }
   before { visit new_mark_path }
 
   describe "with invalid information" do
     it "should not create a mark" do
-      expect { click_button "Create Mark" }.not_to change(Subject, :count)
+      expect { click_button "Create Mark" }.not_to change(Mark, :count)
     end
 
     it "should not create a mark" do

@@ -241,6 +241,8 @@ Mirar como rellenar lo de factories
 
 También hemos realizado una relación n-n entre subject y student
 
+$rails g migration create_join_table_students_subjects student ticket
+
 Realizar pestañas de navegación
 
 gemfile
@@ -261,10 +263,20 @@ custom.css.scss
  
  Intentar mirar la pestaña de navegación de home ver como arreglarla
  
+ 
+ Añadir user_id a los student
+ 
+ No se pueden crear estudiantes que el user_id sea nulo por lo que hay 
+ que ponerlo
+
+ Hay que comprobar cuando se crea un usuario que en su user_id se ha puesto 
+ el del actual en el test del controador
 
 
-
-
+ ##7. Miércoles 20 de Julio
+ 
+ Revisar las restricciones anteriores
+ y hacer lo mismo con los subjects
 
 
  

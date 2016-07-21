@@ -4,7 +4,7 @@ class StudentsController < ApplicationController
   # GET /students
   # GET /students.json
   def index
-    @students = Student.all
+    @students = Student.where(user: current_user)
   end
 
   # GET /students/1
@@ -25,6 +25,7 @@ class StudentsController < ApplicationController
   # POST /students.json
   def create
     @student = Student.new(student_params)
+    @student.user = current_user
 
     respond_to do |format|
       if @student.save
@@ -65,6 +66,7 @@ class StudentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_student
       @student = Student.find(params[:id])
+      redirect_to(root_url) unless current_user?(@student.user)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
