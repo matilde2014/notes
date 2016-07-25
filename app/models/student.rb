@@ -8,4 +8,8 @@ class Student < ActiveRecord::Base
   has_many :marks
   has_and_belongs_to_many :subjects
   belongs_to :user
+
+  def enroll?(subject)
+    subjects.where(id: subject.id).first
+  end
 end

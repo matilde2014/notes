@@ -3,7 +3,12 @@ Notes::Application.routes.draw do
 
   resources :marks
 
-  resources :subjects
+  resources :subjects do
+    member do
+      post :enroll
+      post :cancel
+    end
+  end
 
   resources :students
 
@@ -12,6 +17,8 @@ Notes::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'subjects#index'
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

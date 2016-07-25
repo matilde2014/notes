@@ -1,0 +1,4 @@
+<%= form_tag(cancel_subject_path(@subject), html: { method: :delete } ) do  %>
+    <%= hidden_field_tag( :student_id, student.id)  %>
+    <%= submit_tag "Cancel", class: "btn btn-large btn-primary" %>
+<% end %>

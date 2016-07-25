@@ -1,5 +1,5 @@
 class SubjectsController < ApplicationController
-  before_action :set_subject, only: [:show, :edit, :update, :destroy]
+  before_action :set_subject, only: [:enroll, :cancel, :show, :edit, :update, :destroy]
 
   # GET /subjects
   # GET /subjects.json
@@ -20,6 +20,7 @@ class SubjectsController < ApplicationController
 
   # GET /subjects/1/edit
   def edit
+    @students = Student.where(user: current_user)
   end
 
   # POST /subjects
@@ -61,6 +62,18 @@ class SubjectsController < ApplicationController
       format.html { redirect_to subjects_url }
       format.json { head :no_content }
     end
+  end
+
+  def enroll
+    student = Student.find(params[:student_id])
+    redirect_to(root_url) unless current_user?(student.user)
+    @subject.students << student
+    redirect_to(root_url)
+  end
+
+  def cancel
+    @subject.students.delete(Student.find(params[:student_id]))
+    redirect_to(root_url)
   end
 
   private

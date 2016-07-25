@@ -1,0 +1,6 @@
+<% if student.enroll?(@subject) %>
+    <%= render 'cancel', student: student %>
+<% else %>
+    <%= render 'enroll', student: student %>
+<% end %>
+
