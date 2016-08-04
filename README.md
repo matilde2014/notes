@@ -196,7 +196,7 @@ devise_for :users
 
 
 
-##5. Miércoles 13 de Julio
+##6. Miércoles 13 de Julio
 
 Mejorar el spec request
 
@@ -206,7 +206,7 @@ Al añadir una tabla hay que realizar los siguientes cambios:
 Modificar el spec del modelo
 Modificar el spec del request
 
-##6. Jueves 14 de Julio
+##7. Jueves 14 de Julio
 
 Lograr que el factory girl rails funcione para ello he de mirar estos ficheros
 Gemfile
@@ -233,7 +233,7 @@ Realizar cambios en la memoria
 
 Realice una relacion uno a muchos
 
-##7. Lunes 18 de Julio
+##8. Lunes 18 de Julio
 
 Repasar las cosas anteriores
 Mirar la relaciones que existen entre estudiante, subject y mark
@@ -259,7 +259,7 @@ custom.css.scss
  
  En seeds.rb hemos puesto un usuario
  
- ##7. Martes 19 de Julio
+ ##9. Martes 19 de Julio
  
  Intentar mirar la pestaña de navegación de home ver como arreglarla
  
@@ -273,12 +273,36 @@ custom.css.scss
  el del actual en el test del controador
 
 
- ##7. Miércoles 20 de Julio
+ ##10. Miércoles 20 de Julio
  
  Revisar las restricciones anteriores
  y hacer lo mismo con los subjects
  
  save_and_open_page
 
-## 8. Jueves 21 de Julio
+## 11. Jueves 21 de Julio
+Realizar el enroll
+
+Ficheros en /controllers/
+subjects_controller
  
+Ficheros en /views/subjects/ 
+_enroll.htm.erb
+_form.html.erb
+ 
+
+## 12. Martes 2 de Agosto
+Repasar lo de los últimos días
+Cambiar la apariencia de las siguientes tablas
+/views/subjects/index.html.erb
+/views/students/index.erb
+
+Realizar documentación en el documento latex de lo realizado hasta ahora
+
+Bibliografía
+Implementación
+
+## 13. Jueves 4 de agosto 
+En la memoria añadir puntos de Estudio de herramientas y metodologías de desarrollo
+Realizar una portada
+Completar las referencias o bibliografía
