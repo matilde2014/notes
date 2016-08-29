@@ -306,3 +306,33 @@ Implementación
 En la memoria añadir puntos de Estudio de herramientas y metodologías de desarrollo
 Realizar una portada
 Completar las referencias o bibliografía
+
+## 14. Lunes 29 de agosto
+
+Vuelo para recordar cosas de:
+
+a. Memoria
+b. Implementación
+c. Tener en cuenta también el modelado
+ 
+
+a . memoria
+    Voy a rellenar en el diseño, el diseño de la base de datos
+    En la implementación como se ha ido diseñando el modelo
+ 
+ 
+b. implementación 
+ 
+ Voy a trabajar un poco con la consola de rails para ve como está organizada
+ actualmente la base de datos.
+ 
+ raisl console
+ 
+ Subject.all
+ Student.all
+ 
+ Cosas que tengo que mirar mañana ver en la implementación de la memoria 
+ como seguir rellenandola y poniendo las cosas que se han realizado hasta
+ ahora.
+ 
+ 
