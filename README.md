@@ -339,12 +339,7 @@ b. implementación
  ## 15. Viernes 23 septiembre
  Este día he recordado cosas que había realizado
  
- También planificación de trabajo
- Lunes: 3 horas por la tarde (16:00-19:00).
- Martes: 3 horas por la tarde (17:00-20:00).
- Miercoles: 3 horas por la tarde. (17:00-20:00)
- Jueves: (Este día durante la clase mirar cosas de la memoria porque tengo pocos alumnos)
- Viernes: 2 horas por la mañana. (9:00-11:00)
+
  
  Sábado: 2 horas mínimo
  Dómingo: 2 horas mínimo
