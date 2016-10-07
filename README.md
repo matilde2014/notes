@@ -338,6 +338,12 @@ b. implementación
  
  ## 15. Viernes 23 septiembre
  Este día he recordado cosas que había realizado
+ Planificación
+ Lunes: 3 horas por la tarde (16:00 -19:00)
+ Martes: 3 horas por la tarde (17:00 - 20:00)
+ Miercoles: 3 horas por la tarde (17:00 - 20:00)
+ Jueves: (Este día durante la clase mirar cosas de la memoria porque tengo pocos alumnos)
+ Viernes: 2 horas por la mañana (9:00 - 11:00)
  
 
  
@@ -345,3 +351,15 @@ b. implementación
  Dómingo: 2 horas mínimo
  
  Estoy mirando cosas de la memoria como podía mejorarla.
+ 
+ # 16. Lunes 26 de septiembre 
+ Realizar cosas de la memoria
+ 
+ #17. Martes 27 de septiembre
+  Realizar cosas de la memoria
+  
+ #18. Viernes 30 de septiembre
+ Realizar cosas de la memoria
+ 
+ #19. Viernes 7 de octubre
+ Realizar cosas de la memoria
