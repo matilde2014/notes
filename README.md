@@ -335,8 +335,8 @@ b. implementación
  como seguir rellenandola y poniendo las cosas que se han realizado hasta
  ahora.
  
+ ## 15. Viernes 23 de septiembre
  
- ## 15. Viernes 23 septiembre
  Este día he recordado cosas que había realizado
  Planificación
  Lunes: 3 horas por la tarde (16:00 -19:00)
