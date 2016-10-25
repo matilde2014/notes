@@ -259,7 +259,7 @@ custom.css.scss
  
  En seeds.rb hemos puesto un usuario
  
- ##9. Martes 19 de Julio
+##9. Martes 19 de Julio
  
  Intentar mirar la pestaña de navegación de home ver como arreglarla
  
@@ -273,7 +273,7 @@ custom.css.scss
  el del actual en el test del controador
 
 
- ##10. Miércoles 20 de Julio
+##10. Miércoles 20 de Julio
  
  Revisar las restricciones anteriores
  y hacer lo mismo con los subjects
@@ -308,7 +308,6 @@ Realizar una portada
 Completar las referencias o bibliografía
 
 ## 14. Lunes 29 de agosto
-
 Vuelo para recordar cosas de:
 
 a. Memoria
@@ -335,7 +334,7 @@ b. implementación
  como seguir rellenandola y poniendo las cosas que se han realizado hasta
  ahora.
  
- ## 15. Viernes 23 de septiembre
+## 15. Viernes 23 de septiembre
  
  Este día he recordado cosas que había realizado
  Planificación
@@ -352,17 +351,17 @@ b. implementación
  
  Estoy mirando cosas de la memoria como podía mejorarla.
  
- # 16. Lunes 26 de septiembre 
+## 16. Lunes 26 de septiembre 
  Realizar cosas de la memoria
  
- #17. Martes 27 de septiembre
+##17. Martes 27 de septiembre
   Realizar cosas de la memoria
   
- #18. Viernes 30 de septiembre
+##18. Viernes 30 de septiembre
  Realizar cosas de la memoria
  
- #19. Viernes 7 de octubre
+##19. Viernes 7 de octubre
  Realizar cosas de la memoria
  
- #20. Martes 25 de octubre
+##20. Martes 25 de octubre
  Realizar cosas de la memoria
