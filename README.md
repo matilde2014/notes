@@ -363,3 +363,6 @@ b. implementación
  
  #19. Viernes 7 de octubre
  Realizar cosas de la memoria
+ 
+ #20. Martes 25 de octubre
+ Realizar cosas de la memoria
