@@ -234,6 +234,8 @@ Realizar cambios en la memoria
 Realice una relacion uno a muchos
 
 ##8. Lunes 18 de Julio
+##9. hola 
+
 
 Repasar las cosas anteriores
 Mirar la relaciones que existen entre estudiante, subject y mark
