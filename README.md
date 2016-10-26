@@ -368,30 +368,50 @@ b. implementación
  Realizar cosas de la memoria en concreto:
  
  4.4 Elección de herramientas 
-       4.4.1 Elección de herramientas de desarrollo
+ 
+      
+     4.4.1 Elección de herramientas de desarrollo
+       
        4.4.2 Elección de plataforma de control de la nube
+       
        4.4.3 Elección de herramientas de pruebas
  
  5 Metodologı́a de desarollo
+ 
  5.1 Programación extrema (XP - eXtreme Programming
+ 
  5.2  Metodologı́a TDD
+ 
  5.3. Metodologı́a BDD
+ 
  5.4 Desarrollo ATDD
+ 
  
 
 ##21. Miercoles 26 de octubre
  Realizar cosas de la memoria en concreto:
+ 
  6 Recursos utilizados
+ 
  6.1 Recursos hardware
+ 
  6.2 Recursos software
+ 
  6.2.1 Sistemas operativos
+ 
  6.2.2 Navegador Web
- 6.2.3 Entorno de desarrollo
-  integrado
- 6.2.4 Sistema de control de
-  versiones
+ 
+ 6.2.3 Entorno de desarrollo integrado
+ 
+ 6.2.4 Sistema de control de   versiones
+ 
  6.2.5 Editores de texto
+ 
  6.2.6 Editores de bocetos
+ 
  6.3 Tecnologı́as utilizadas
+ 
  6.3.1 a . . . . . . . . . . .
+ 
  6.3.2 b . . . . . . .
+ 
