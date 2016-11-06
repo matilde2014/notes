@@ -40,7 +40,8 @@ sudo apt-get install git
 
 ###Se va a utilizar la metodología TDD
 ###Fichero Gemfile
-Se ha modificado algunas cosas como capybara y rspec. Respecto a rspec el fichero dummy_spec.rb nos sirve para testear que todo va correctamente.
+Se ha modificado algunas cosas como capybara y rspec. Respecto a rspec el fichero dummy_spec.rb 
+nos sirve para testear que todo va correctamente.
 
 ###Se ha subido el proyecto a github
 
@@ -414,4 +415,22 @@ b. implementación
  6.3.1 a . . . . . . . . . . .
  
  6.3.2 b . . . . . . .
+ 
+##22. Miercoles 31/10 de octubre
+ Realizar cosas de la memoria en concreto: Leer el análisis y comentar 
+ que cosas faltan y si hay que reestructurar algo
+
+
+##23. Miercoles 1/11 de octubre
+Memoria: Leer el diseño y comentar que cosas faltan y si hay que reestructurar algo
+
+##24. Miercoles 2/11 de octubre
+Memoria:  Leer la implementación y comentar que cosas faltan y si hay 
+que reestructurar algo.En concreto dividir como tengo ahora la implementación 
+en tres partes: Implementación, resultados y conclusiones y trabajo futuro.
+
+##25. Miercoles 6/11 de octubre
+
+Hoy voy a estar leyendo lo que habíamos implementado y realizar un documento resumen
+para entenderlo mejor.
  
