@@ -13,19 +13,16 @@ describe Student do
   it { should respond_to(:birthday) }
   it { should respond_to(:nif) }
 
-  it { should respond_to(:marks) }
-  it { should respond_to (:subjects)}
-  it { should respond_to (:user)}
+  describe "when name is not present" do
 
+      before { @student.name = " " }
+    it { should_not be_valid }
+  end
   describe "when user_id is not present" do
     before { @student.user_id = " " }
     it { should_not be_valid }
   end
 
-  describe "when name is not present" do
-    before { @student.name = " " }
-    it { should_not be_valid }
-  end
 
   describe "when date is not present" do
     before { @student.birthday = " " }
@@ -36,5 +33,9 @@ describe Student do
     before { @student.nif = " " }
     it { should_not be_valid }
   end
+
+  it { should respond_to(:marks) }
+  it { should respond_to (:subjects)}
+  it { should respond_to (:user)}
 
 end
