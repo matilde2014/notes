@@ -11,6 +11,7 @@ describe Subject do
 
   it { should respond_to(:name) }
   it { should respond_to(:hours) }
+  it { should respond_to(:remarks) }
 
   it { should respond_to(:marks) }
   it { should respond_to(:students) }

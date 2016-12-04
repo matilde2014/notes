@@ -12,12 +12,23 @@ describe Student do
   it { should respond_to(:name) }
   it { should respond_to(:birthday) }
   it { should respond_to(:nif) }
+  it { should respond_to(:address) }
+  it { should respond_to(:phone) }
+  it { should respond_to(:email) }
+  it { should respond_to(:guardian_name) }
+  it { should respond_to(:guardian_phone) }
+  it { should respond_to(:guardian_email) }
+  it { should respond_to(:former_studies) }
+  it { should respond_to(:access_mode) }
+  it { should respond_to(:remarks) }
+
+
 
   describe "when name is not present" do
-
       before { @student.name = " " }
     it { should_not be_valid }
   end
+
   describe "when user_id is not present" do
     before { @student.user_id = " " }
     it { should_not be_valid }
@@ -39,3 +50,4 @@ describe Student do
   it { should respond_to (:user)}
 
 end
+

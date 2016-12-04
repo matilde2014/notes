@@ -1,29 +1,65 @@
 <%= form_for(@student) do |f| %>
-  <% if @student.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+    <% if @student.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
 
-      <ul>
-      <% @student.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% @student.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :birthday %><br>
-    <%= f.date_select :birthday %>
-  </div>
-  <div class="field">
-    <%= f.label :nif %><br>
-    <%= f.text_field :nif %>
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
     </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :birthday %><br>
+      <%= f.date_select :birthday %>
+    </div>
+    <div class="field">
+      <%= f.label :nif %><br>
+      <%= f.text_field :nif %>
+    </div>
+    <div class="field">
+      <%= f.label :address %><br>
+      <%= f.text_field :address %>
+    </div>
+    <div class="field">
+      <%= f.label :phone %><br>
+      <%= f.text_field :phone %>
+    </div>
+    <div class="field">
+      <%= f.label :email %><br>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :guardian_name %><br>
+      <%= f.text_field :guardian_name %>
+    </div>
+    <div class="field">
+      <%= f.label :guardian_phone %><br>
+      <%= f.text_field :guardian_phone %>
+    </div>
+    <div class="field">
+      <%= f.label :guardian_email %><br>
+      <%= f.text_field :guardian_email %>
+    </div>
+    <div class="field">
+      <%= f.label :former_studies %><br>
+      <%= f.text_field :former_studies %>
+    </div>
+    <div class="field">
+       <%= f.label :access_mode %><br>
+      <%= select_access_mode(:student) %>
+    </div>
+    <div class="field">
+      <%= f.label :remarks %><br>
+      <%= f.text_area :remarks, rows: 10 %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>

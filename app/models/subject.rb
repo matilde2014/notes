@@ -3,6 +3,8 @@ class Subject < ActiveRecord::Base
   validates :hours, presence: true
   validates :user_id, presence: true
 
+  validates_uniqueness_of :name, :scope => :user_id
+
   has_many :marks
   has_and_belongs_to_many :students
   belongs_to :user

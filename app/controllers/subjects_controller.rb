@@ -11,6 +11,7 @@ class SubjectsController < ApplicationController
   # GET /subjects/1
   # GET /subjects/1.json
   def show
+    @students = @subject.students.where(user_id: current_user.id)
   end
 
   # GET /subjects/new
@@ -77,14 +78,14 @@ class SubjectsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_subject
-      @subject = Subject.find(params[:id])
-      redirect_to(root_url) unless current_user?(@subject.user)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_subject
+    @subject = Subject.find(params[:id])
+    redirect_to(root_url) unless current_user?(@subject.user)
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def subject_params
-      params.require(:subject).permit(:name, :hours)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def subject_params
+    params.require(:subject).permit(:name, :hours, :remarks)
+  end
 end

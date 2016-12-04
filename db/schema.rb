@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160720182820) do
+ActiveRecord::Schema.define(version: 20161204150251) do
 
   create_table "marks", force: true do |t|
     t.float    "value"
@@ -29,7 +29,16 @@ ActiveRecord::Schema.define(version: 20160720182820) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "nif"
-    t.integer  "user_id",    null: false
+    t.integer  "user_id",        null: false
+    t.string   "address"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "guardian_name"
+    t.string   "guardian_phone"
+    t.string   "guardian_email"
+    t.string   "former_studies"
+    t.string   "access_mode"
+    t.text     "remarks"
   end
 
   create_table "students_subjects", id: false, force: true do |t|
@@ -43,6 +52,7 @@ ActiveRecord::Schema.define(version: 20160720182820) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id",    null: false
+    t.text     "remarks"
   end
 
   create_table "users", force: true do |t|

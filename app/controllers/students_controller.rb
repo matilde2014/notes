@@ -10,6 +10,7 @@ class StudentsController < ApplicationController
   # GET /students/1
   # GET /students/1.json
   def show
+    @subjects = @student.subjects.where(:user_id => current_user.id)
   end
 
   # GET /students/new
@@ -63,14 +64,16 @@ class StudentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_student
-      @student = Student.find(params[:id])
-      redirect_to(root_url) unless current_user?(@student.user)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_student
+    @student = Student.find(params[:id])
+    redirect_to(root_url) unless current_user?(@student.user)
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def student_params
-      params.require(:student).permit(:name, :birthday, :nif)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def student_params
+    params.require(:student).permit(:name, :birthday, :nif, :address, :phone, :email, :guardian_name, :guardian_phone, :guardian_email,
+                                    :former_studies, :access_mode, :remarks)
+
+  end
 end

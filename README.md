@@ -433,4 +433,8 @@ en tres partes: Implementación, resultados y conclusiones y trabajo futuro.
 
 Hoy voy a estar leyendo lo que habíamos implementado y realizar un documento resumen
 para entenderlo mejor.
- 
+
+##26. Martes 29 de noviembre 
+Revisar punto de introducción y estrucuta del documento
+Realizar boceto de la presentación
+Mirar cosas de la implementación
