@@ -20,4 +20,56 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  wellcome_teacher_notes: Wellcome to te Teacher's Notebook
+  home: Home
+  account: Account
+  settings: Settings
+  sign_out: Sign out
+  sign_in: Sign in
+  select_access_mode: Select access mode
+  ESO: ESO
+  BACHILLERATO: Bachillerato
+  CICLO_MEDIO: Ciclo de grado medio
+  CICLO_SUPERIOR: Ciclo de grado superior
+  ESTUDIOS_UNIVERSITARIOS: Estudios universitarios
+  back: Back
+  show: Show
+  edit: Edit
+  destroy: Destroy
+  are_you_sure: Are you sure?
+  unenroll: Unenroll
+  cancel: Cancel
+  enroll: Enroll
+  name: Name
+  hours: Hours
+  birthday: Birthday
+  nif: ID Number
+  address: Address
+  phone: Phone
+  Email: Email
+  new_student: New student
+  students: Estudents
+  enrolled_students: Enrolled students
+  listing_students: Listing students
+  create_student: Create student
+  update_student: Update student
+  editing_student: Editing student
+  student_successfullly_created: Student was successfully created.
+  student_successfullly_updated: Student was successfully updated.
+  new_subject: New subject
+  subjects: Subjects
+  listing_subjects: Listing subjects
+  create_subject: Create subject
+  update_subject: Update subject
+  editing_subject: Editing subject
+  subject_successfullly_created: Subject was successfully created.
+  subject_successfullly_updated: Subject was successfully updated.
+  errors_count:
+    one: '1 error'
+    other: "%{count} errors"
+  prohibited_student:
+    one: 'prohibited student to be saved:'
+    other: 'prohibited student to be saved:'
+  prohibited_subject:
+    one: 'prohibited subject to be saved:'
+    other: 'prohibited subject to be saved:'

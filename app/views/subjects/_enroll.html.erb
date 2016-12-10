@@ -1,4 +1,4 @@
 <%= form_tag ( enroll_subject_path(@subject) ) do  %>
     <%= hidden_field_tag( :student_id, student.id)  %>
-    <%= submit_tag "Enroll", class: "btn btn-large btn-primary" %>
+    <%= submit_tag t(:enroll), class: "btn btn-large btn-primary" %>
 <% end %>

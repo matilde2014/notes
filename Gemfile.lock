@@ -53,6 +53,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-i18n (1.1.1)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -178,6 +179,7 @@ DEPENDENCIES
   capybara (= 2.1.0)
   coffee-rails (~> 4.0.0)
   devise
+  devise-i18n
   factory_girl_rails
   jbuilder (~> 1.2)
   jquery-rails

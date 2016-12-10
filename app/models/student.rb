@@ -10,6 +10,8 @@ class Student < ActiveRecord::Base
 
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+
+
   validates_format_of :email, :with => VALID_EMAIL_REGEX, :allow_blank => true
   validates_format_of :guardian_email, :with => VALID_EMAIL_REGEX, :allow_blank => true
 

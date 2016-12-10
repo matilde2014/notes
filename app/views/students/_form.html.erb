@@ -1,7 +1,7 @@
 <%= form_for(@student) do |f| %>
     <% if @student.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+          <h2><%= t("errors_count",count: @student.errors.count) %> <%= t('prohibited_student', count: @student.errors.count) %></h2>
 
           <ul>
             <% @student.errors.full_messages.each do |msg| %>
@@ -52,7 +52,7 @@
       <%= f.text_field :former_studies %>
     </div>
     <div class="field">
-       <%= f.label :access_mode %><br>
+      <%= f.label :access_mode %><br>
       <%= select_access_mode(:student) %>
     </div>
     <div class="field">
@@ -60,6 +60,6 @@
       <%= f.text_area :remarks, rows: 10 %>
     </div>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit ['new','create'].include?(params[:action]) ? t('create_student') : t('update_student') %>
     </div>
 <% end %>

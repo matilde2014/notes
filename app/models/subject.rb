@@ -5,6 +5,7 @@ class Subject < ActiveRecord::Base
 
   validates_uniqueness_of :name, :scope => :user_id
 
+
   has_many :marks
   has_and_belongs_to_many :students
   belongs_to :user

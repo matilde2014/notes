@@ -1,0 +1,135 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+es:
+  wellcome_teacher_notes: Bienvenido al Cuaderno del Profesor
+  home: Inicio
+  account: Cuenta
+  settings: Configuración
+  sign_out: Cerrar sesión
+  sign_in: Iniciar sesión
+  select_access_mode: Seleccione modalidad de acceso
+  ESO: ESO
+  BACHILLERATO: Bachillerato
+  CICLO_MEDIO: Ciclo de grado medio
+  CICLO_SUPERIOR: Ciclo de grado superior
+  ESTUDIOS_UNIVERSITARIOS: Estudios universitarios
+  back: Volver
+  show: Mostrar
+  edit: Editar
+  destroy: Eliminar
+  are_you_sure: ¿Estás seguro/a?
+  unenroll: Desmatricular
+  cancel: Cancelar
+  enroll: Matricular
+  name: Nombre
+  hours: Horas
+  birthday: Fecha nacimiento
+  nif: NIF
+  address: Dirección
+  phone: Teléfono
+  Email: Email
+  new_student: Nuevo estudiante
+  students: Estudiantes
+  enrolled_students: Estudiantes matriculados
+  listing_students: Lista de estudiantes
+  create_student: Crear estudiante
+  update_student: Actualizar estudiante
+  editing_student: Editando estudiante
+  student_successfullly_created: El estudiante fue creado con éxito.
+  student_successfullly_updated: El estudiante fue actualizado con éxito.
+  new_subject: Nueva asignatura
+  subjects: Asignaturas
+  listing_subjects: Lista de asignaturas
+  create_subject: Crear asignatura
+  update_subject: Actualizar asignatura
+  editing_subject: Editando asignatura
+  subject_successfullly_created: La asignatura fue creada con éxito.
+  subject_successfullly_updated: La asignatura fue actualizada con éxito.
+  devise:
+    sessions:
+      user:
+        signed_in: Sesión iniciada con éxito
+    failure:
+      user:
+        unauthenticated: El usuario no está autenticado
+  date:
+    order: [day, month, year]
+    formats:
+      default: ""
+      long: ""
+      short: ""
+    month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
+  errors_count:
+    one: '1 error'
+    other: "%{count} errores"
+  prohibited_student:
+    one: 'impidió que se registrara el estudiante:'
+    other: 'impidieron que se registrara el estudiante:'
+  prohibited_subject:
+    one: 'impidió que se registrara la asignatura:'
+    other: 'impidieron que se registrara la asignatura:'
+  activerecord:
+    models:
+      user: Usuario
+      subject: Asignatura
+      stutent: Estudiante
+    attributes:
+      subject:
+        name: Nombre
+        hours: Horas
+        remarks: Observaciones
+      student:
+        name: Nombre
+        birthday: Fecha de nacimiento
+        nif: NIF
+        address: Dirección
+        phone: Teléfono
+        email: Email
+        guardian_name: Nombre del padre, madre o tutor/a
+        guardian_phone: Teléfono del padre, madre o tutor/a
+        guardian_email: Email del padre, madre o tutor/a
+        former_studies: Estudios anteriores
+        access_mode: Modalidad de acceso
+        remarks: Observaciones
+    errors:
+      models:
+        subject:
+          attributes:
+            name:
+              blank: no puede estar vacío
+              taken: ya está repetido en el sistema
+            hours:
+              blank: no puede estar vacío
+        student:
+          attributes:
+            name:
+              blank: no puede estar vacío
+              taken: ya está repetido en el sistema
+            nif:
+              blank: no puede estar vacío
+              taken: ya está repetido en el sistema
+            email:
+              invalid: tiene un formato inválido
+            guardian_email:
+              invalid: tiene un formato inválido
+            access_mode:
+              inclusion: debe tener un valor asignado

@@ -3,7 +3,8 @@ require 'spec_helper'
 describe Student do
 
   before do
-    @student = Student.new(name: 'Example User', birthday: '01/01/1970', nif: '44703488k')
+    @student = Student.new(name: 'Example User',
+                           birthday: '01/01/1970', nif: '44703488k')
   end
 
   subject { @student }

@@ -1,7 +1,7 @@
 <%= form_for(@subject) do |f| %>
     <% if @subject.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@subject.errors.count, "error") %> prohibited this subject from being saved:</h2>
+          <h2><%= t("errors_count",count: @subject.errors.count) %> <%= t('prohibited_subject', count: @subject.errors.count) %></h2>
 
           <ul>
             <% @subject.errors.full_messages.each do |msg| %>
@@ -24,6 +24,6 @@
       <%= f.text_area :remarks, rows: 10 %>
     </div>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit ['new','create'].include?(params[:action]) ? t('create_subject') : t('update_subject') %>
     </div>
 <% end %>

@@ -3,27 +3,27 @@
 
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('activerecord.attributes.subject.name') %>:</strong>
   <%= @subject.name %>
 </p>
 
 <p>
-  <strong>Hours:</strong>
+  <strong><%= t('activerecord.attributes.subject.hours') %>:</strong>
   <%= @subject.hours %>
 </p>
 
 <p>
-  <strong>Remarks:</strong>
+  <strong><%= t('activerecord.attributes.subject.remarks') %>:</strong>
   <%= @subject.remarks %>
 </p>
 
 <p>
-  <strong>Enrolled students:</strong>
+  <strong><%= t(:enrolled_students) %>:</strong>
 <table class="table table-striped table-hover">
   <thead>
   <tr>
-    <th>Name</th>
-    <th>NIF</th>
+    <th><%= t :name %></th>
+    <th><%= t :nif %></th>
     <th></th>
   </tr>
   </thead>
@@ -33,12 +33,12 @@
       <tr>
         <td><%= link_to student.name, student %></td>
         <td><%= link_to student.nif, student %></td>
-        <td><%= link_to 'Unenroll', "" %></td>
+        <td><%= link_to t(:unenroll), "" %></td>
       </tr>
   <% end %>
   </tbody>
 </table>
 </p>
 
-<%= link_to 'Edit', edit_subject_path(@subject) %> |
-<%= link_to 'Back', subjects_path %>
+<%= link_to t(:edit), edit_subject_path(@subject) %> |
+<%= link_to t(:back), subjects_path %>

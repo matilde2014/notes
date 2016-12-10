@@ -25,14 +25,13 @@ class SubjectsController < ApplicationController
   end
 
   # POST /subjects
-  # POST /subjects.json
   def create
     @subject = Subject.new(subject_params)
     @subject.user = current_user
 
     respond_to do |format|
       if @subject.save
-        format.html { redirect_to @subject, notice: 'Subject was successfully created.' }
+        format.html { redirect_to @subject, notice: t(:subject_successfullly_created) }
         format.json { render action: 'show', status: :created, location: @subject }
       else
         format.html { render action: 'new' }
@@ -46,7 +45,7 @@ class SubjectsController < ApplicationController
   def update
     respond_to do |format|
       if @subject.update(subject_params)
-        format.html { redirect_to @subject, notice: 'Subject was successfully updated.' }
+        format.html { redirect_to @subject, notice: t(:subject_successfullly_updated) }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

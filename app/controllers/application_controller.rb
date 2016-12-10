@@ -8,4 +8,11 @@ class ApplicationController < ActionController::Base
   #To set up a controller with user authentication,
   # just add this before_action (assuming your devise model is 'User')
   before_action :authenticate_user!
+
+  before_action :set_locale
+
+  def set_locale
+    I18n.locale = "es"
+    #I18n.locale = params[:locale] || I18n.default_locale
+  end
 end

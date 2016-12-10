@@ -1,86 +1,64 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('activerecord.attributes.student.name') %>:</strong>
   <%= @student.name %>
 </p>
 
 <p>
-  <strong>Nif:</strong>
+  <strong><%= t('activerecord.attributes.student.nif') %>:</strong>
   <%= @student.nif %>
 </p>
 
 <p>
-  <strong>Birthday:</strong>
+  <strong><%= t('activerecord.attributes.student.birthday') %>:</strong>
   <%= @student.birthday %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong><%= t('activerecord.attributes.student.address') %>:</strong>
   <%= @student.address %>
 </p>
 
 <p>
-  <strong>Phone:</strong>
+  <strong><%= t('activerecord.attributes.student.phone') %>:</strong>
   <%= @student.phone %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <strong><%= t('activerecord.attributes.student.email') %>:</strong>
   <%= @student.email %>
 </p>
 
 <p>
-  <strong>Guardian name:</strong>
+  <strong><%= t('activerecord.attributes.student.guardian_name') %>:</strong>
   <%= @student.guardian_name %>
 </p>
 
 <p>
-  <strong>Guardian phone:</strong>
+  <strong><%= t('activerecord.attributes.student.guardian_phone') %>:</strong>
   <%= @student.guardian_phone %>
 </p>
 
 <p>
-  <strong>Guardian email:</strong>
+  <strong><%= t('activerecord.attributes.student.guardian_email') %>:</strong>
   <%= @student.guardian_email %>
 </p>
 
 <p>
-  <strong>Former studies:</strong>
+  <strong><%= t('activerecord.attributes.student.former_studies') %>:</strong>
   <%= @student.former_studies %>
 </p>
 
 <p>
-  <strong>Access mode:</strong>
+  <strong><%= t('activerecord.attributes.student.access_mode') %>:</strong>
   <%= t(@student.access_mode) %>
 </p>
 
 <p>
-  <strong>Remarks:</strong>
+  <strong><%= t('activerecord.attributes.student.remarks') %>:</strong>
   <%= @student.remarks %>
 </p>
 
 <p>
-  <strong>Subjects:</strong>
-
-<table class="table table-striped table-hover">
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th></th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @subjects.each do |subject| %>
-      <tr>
-        <td><%= link_to subject.name, subject %></td>
-        <td><%= link_to 'Unenroll', "" %></td>
-      </tr>
-  <% end %>
-  </tbody>
-</table>
-</p>
-
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+  <strong><%= t(:subjects) %>:</strong>
