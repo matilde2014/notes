@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161204150251) do
+ActiveRecord::Schema.define(version: 20161223105536) do
 
   create_table "marks", force: true do |t|
     t.float    "value"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20161204150251) do
     t.string   "former_studies"
     t.string   "access_mode"
     t.text     "remarks"
+    t.string   "image"
   end
 
   create_table "students_subjects", id: false, force: true do |t|
