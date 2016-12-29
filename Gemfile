@@ -68,6 +68,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'bootstrap-sass', '2.3.2.0'
 
-gem 'mini_magick'
+#gem 'mini_magick'
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
+gem 'cloudinary'
 

@@ -140,7 +140,7 @@ SPEC - controllers
 ###Añadir campos a la tabla alumno
 
 
-###Crear una relación entre tablas 1 - N
+    ###Crear una relación entre tablas 1 - N
 ###Crear cuenta en Heroku
 
 https://toolbelt.heroku.com/debian
@@ -243,7 +243,7 @@ Mirar como rellenar lo de factories
 
 También hemos realizado una relación n-n entre subject y student
 
-$rails g migration create_join_table_students_subjects student ticket
+$rails g migration create_join_table_students_subjects student subject
 
 Realizar pestañas de navegación
 
