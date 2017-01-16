@@ -1,0 +1,41 @@
+<h1><%= t(:listing_subject_evaluable_items) %></h1>
+
+<p>
+  <strong><%= t(:subject) %>:</strong>
+  <%= @subject.name %>
+</p>
+
+<p>
+  <strong><%= t(:evaluable_items) %>:</strong>
+  <% if @evaluable_items.length > 0 %>
+    <table class="table table-striped table-hover">
+      <thead>
+      <tr>
+        <th><%= t(:name) %></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @evaluable_items.each do |evaluable_item| %>
+          <tr>
+            <td><%= evaluable_item.name %></td>
+            <td><%= link_to t(:show), subject_evaluable_item_path(@subject,evaluable_item) %></td>
+            <td><%= link_to t(:edit), edit_subject_evaluable_item_path(@subject,evaluable_item) %></td>
+            <td><%= link_to t(:destroy), subject_evaluable_item_path(@subject,evaluable_item), method: :delete, data: { confirm: t(:are_you_sure) } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+<% else %>
+    <%= t(:no_evaluable_items) %>
+<% end %>
+</p>
+
+<br>
+<br>
+
+<%= link_to t(:back), subject_path(@subject) %> |
+<%= link_to t(:new_evaluable_item), new_subject_evaluable_item_path(@subject) %>

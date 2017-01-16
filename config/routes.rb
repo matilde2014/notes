@@ -1,4 +1,5 @@
 Notes::Application.routes.draw do
+
   resources :students2s
 
   devise_for :users
@@ -10,9 +11,15 @@ Notes::Application.routes.draw do
       post :enroll
       post :cancel
     end
+    resources :evaluable_items
   end
 
-  resources :students
+  resources :students do
+    member do
+      #post :enroll
+      post :cancel
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

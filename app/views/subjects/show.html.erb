@@ -8,6 +8,11 @@
 </p>
 
 <p>
+  <strong><%= t('activerecord.attributes.subject.course') %>:</strong>
+  <%= @subject.course %>
+</p>
+
+<p>
   <strong><%= t('activerecord.attributes.subject.hours') %>:</strong>
   <%= @subject.hours %>
 </p>
@@ -19,28 +24,34 @@
 
 <p>
   <strong><%= t(:enrolled_students) %>:</strong>
-<table class="table table-striped table-hover">
-  <thead>
-  <tr>
-    <th></th>
-    <th><%= t :name %></th>
-    <th><%= t :nif %></th>
-    <th></th>
-  </tr>
-  </thead>
-
-  <tbody>
-  <% @students.each do |student| %>
+  <% if @students.length > 0 %>
+      <%= paginate @students %>
+    <table class="table table-striped table-hover">
+      <thead>
       <tr>
-        <td><%= link_to(image_tag(student.image_url(:thumb)), student) if student.image? %></td>
-        <td><%= link_to student.name, student %></td>
-        <td><%= link_to student.nif, student %></td>
-        <td><%= link_to t(:unenroll), "" %></td>
+        <th></th>
+        <th><%= t :name %></th>
+        <th><%= t :nif %></th>
+        <th></th>
       </tr>
-  <% end %>
-  </tbody>
-</table>
+      </thead>
+
+      <tbody>
+      <% @students.each do |student| %>
+          <tr>
+            <td><%= link_to(image_tag(student.image_url(:thumb)), student) if student.image? %></td>
+            <td><%= link_to student.name, student %></td>
+            <td><%= link_to student.nif, student %></td>
+            <td><%= link_to t(:unenroll), cancel_subject_path(@subject,student_id: student.id), method: :post %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+<% else %>
+    <%= t(:no_enrolled_students) %>
+<% end %>
 </p>
 
 <%= link_to t(:edit), edit_subject_path(@subject) %> |
+<%= link_to t(:evaluable_items), subject_evaluable_items_path(@subject) %> |
 <%= link_to t(:back), subjects_path %>

@@ -47,9 +47,11 @@ es:
   address: Dirección
   phone: Teléfono
   Email: Email
+  course: Curso académico
   new_student: Nuevo estudiante
   students: Estudiantes
   enrolled_students: Estudiantes matriculados
+  no_enrolled_students: No hay estudiantes matriculados
   listing_students: Lista de estudiantes
   create_student: Crear estudiante
   update_student: Actualizar estudiante
@@ -58,12 +60,29 @@ es:
   student_successfullly_updated: El estudiante fue actualizado con éxito.
   new_subject: Nueva asignatura
   subjects: Asignaturas
+  no_subjects: No hay asignaturas
   listing_subjects: Lista de asignaturas
   create_subject: Crear asignatura
   update_subject: Actualizar asignatura
   editing_subject: Editando asignatura
   subject_successfullly_created: La asignatura fue creada con éxito.
   subject_successfullly_updated: La asignatura fue actualizada con éxito.
+  evaluable_items: Elementos evaluables
+  new_evaluable_item: Nuevo elemento evaluable
+  no_evaluable_items: No hay elementos evaluables
+  listing_subject_evaluable_items: Lista de elementos evaluables de la asignatura
+  create_evaluable_item: Crear elemento evaluable
+  update_evaluable_item: Actualizar elemento evaluable
+  editing_evaluable_item: Editando elemento evaluable
+  evaluable_item_successfullly_created: El elemento evaluable fue creado con éxito.
+  evaluable_item_successfullly_updated: El elemento evaluable fue actualizado con éxito.
+  views:
+    pagination:
+      first: "Primera"
+      last: "Última"
+      previous: "&lt; Anterior"
+      next: "Siguiente &gt;"
+      trucate: "..."
   devise:
     sessions:
       user:
@@ -87,16 +106,21 @@ es:
   prohibited_subject:
     one: 'impidió que se registrara la asignatura:'
     other: 'impidieron que se registrara la asignatura:'
+  prohibited_evaluable_item:
+    one: 'impidió que se registrara el elemento evaluable:'
+    other: 'impidieron que se registrara el elemento evaluable:'
   activerecord:
     models:
       user: Usuario
       subject: Asignatura
       stutent: Estudiante
+      evaluable_item: Elemento evaluable
     attributes:
       subject:
         name: Nombre
         hours: Horas
         remarks: Observaciones
+        course: Curso académico
       student:
         name: Nombre
         birthday: Fecha de nacimiento
@@ -109,6 +133,9 @@ es:
         guardian_email: Email del padre, madre o tutor/a
         former_studies: Estudios anteriores
         access_mode: Modalidad de acceso
+        remarks: Observaciones
+      evaluable_item:
+        name: Nombre
         remarks: Observaciones
     errors:
       models:
@@ -133,3 +160,8 @@ es:
               invalid: tiene un formato inválido
             access_mode:
               inclusion: debe tener un valor asignado
+        evaluable_item:
+          attributes:
+            name:
+              blank: no puede estar vacío
+              taken: ya está repetido para esta asignatura

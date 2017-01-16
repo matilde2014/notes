@@ -112,7 +112,7 @@ A veces al ejecutar el rspec nos da un error y tenemos que ejecutar esto:
 
 3)http://edgeguides.rubyonrails.org/active_record_migrations.html
 
-4)Hacer la migración:rake db:migrate && rake db:test:prepare
+4)Hacer la migración:
 
 5)Seguidamente hay que hacer cambios en la vista y en el controlador
 

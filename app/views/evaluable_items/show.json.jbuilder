@@ -1,0 +1,1 @@
+json.extract! @evaluable_item, :id, :name, :remarks, :subject_id, :created_at, :updated_at

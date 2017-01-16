@@ -47,9 +47,11 @@ en:
   address: Address
   phone: Phone
   Email: Email
+  course: Academic course
   new_student: New student
   students: Estudents
   enrolled_students: Enrolled students
+  no_enrolled_students: No enrolled students
   listing_students: Listing students
   create_student: Create student
   update_student: Update student
@@ -58,12 +60,29 @@ en:
   student_successfullly_updated: Student was successfully updated.
   new_subject: New subject
   subjects: Subjects
+  no_subjects: No subjects
   listing_subjects: Listing subjects
   create_subject: Create subject
   update_subject: Update subject
   editing_subject: Editing subject
   subject_successfullly_created: Subject was successfully created.
   subject_successfullly_updated: Subject was successfully updated.
+  evaluable_items: Evaluable items
+  new_evaluable_item: New evaluable item
+  no_evaluable_items: No evaluable items
+  listing_subject_evaluable_items: Listing evaluable items
+  create_evaluable_item: Create evaluable item
+  update_evaluable_item: Update evaluable item
+  editing_evaluable_item: Editing evaluable item
+  evaluable_item_successfullly_created: Evaluable item was successfully created.
+  evaluable_item_successfullly_updated: Evaluable item was successfully updated.
+  views:
+    pagination:
+      first: "First"
+      last: "Last"
+      previous: "&lt; Previous"
+      next: "Next &gt;"
+      trucate: "..."
   errors_count:
     one: '1 error'
     other: "%{count} errors"
@@ -73,3 +92,6 @@ en:
   prohibited_subject:
     one: 'prohibited subject to be saved:'
     other: 'prohibited subject to be saved:'
+  prohibited_evaluable_item:
+    one: 'prohibited evaluable item to be saved:'
+    other: 'prohibited evaluable to be saved:'

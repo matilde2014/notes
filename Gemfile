@@ -72,3 +72,4 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 gem 'cloudinary'
 
+gem 'kaminari'

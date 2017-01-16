@@ -1,0 +1,6 @@
+<h1><%= t(:editing_evaluable_item) %></h1>
+
+<%= render 'form' %>
+
+<%= link_to t(:show), subject_evaluable_item_path(@subject,@evaluable_item) %> |
+<%= link_to t(:back), subject_evaluable_items_path(@subject) %>

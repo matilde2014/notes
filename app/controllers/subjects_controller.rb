@@ -4,14 +4,13 @@ class SubjectsController < ApplicationController
   # GET /subjects
   # GET /subjects.json
   def index
-    #@subjects = Subject.all
-    @subjects = Subject.where(user: current_user)
+    @subjects = Subject.where(user: current_user).page(params[:page]).per(10)
   end
 
   # GET /subjects/1
   # GET /subjects/1.json
   def show
-    @students = @subject.students.where(user_id: current_user.id)
+    @students = @subject.students.where(user_id: current_user.id).page(params[:page]).per(10)
   end
 
   # GET /subjects/new
@@ -21,10 +20,11 @@ class SubjectsController < ApplicationController
 
   # GET /subjects/1/edit
   def edit
-    @students = Student.where(user: current_user)
+    @students = Student.where(user: current_user).page(params[:page]).per(10)
   end
 
   # POST /subjects
+  # POST /subjects.json
   def create
     @subject = Subject.new(subject_params)
     @subject.user = current_user
@@ -68,12 +68,12 @@ class SubjectsController < ApplicationController
     student = Student.find(params[:student_id])
     redirect_to(root_url) unless current_user?(student.user)
     @subject.students << student
-    redirect_to(root_url)
+    redirect_to(@subject)
   end
 
   def cancel
     @subject.students.delete(Student.find(params[:student_id]))
-    redirect_to(root_url)
+    redirect_to(@subject)
   end
 
   private
@@ -85,6 +85,6 @@ class SubjectsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def subject_params
-    params.require(:subject).permit(:name, :hours, :remarks)
+    params.require(:subject).permit(:name, :hours, :remarks, :course)
   end
 end

@@ -1,16 +1,16 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:show, :edit, :update, :destroy]
+  before_action :set_student, only: [:show, :edit, :update, :destroy,:cancel]
 
   # GET /students
   # GET /students.json
   def index
-    @students = Student.where(user: current_user)
+    @students = Student.where(user: current_user).page(params[:page]).per(10)
   end
 
   # GET /students/1
   # GET /students/1.json
   def show
-    @subjects = @student.subjects.where(:user_id => current_user.id)
+    @subjects = @student.subjects.where(:user_id => current_user.id).page(params[:page]).per(10)
   end
 
   # GET /students/new
@@ -61,6 +61,11 @@ class StudentsController < ApplicationController
       format.html { redirect_to students_url }
       format.json { head :no_content }
     end
+  end
+
+  def cancel
+    @student.subjects.delete(Subject.find(params[:subject_id]))
+    redirect_to(@student)
   end
 
   private

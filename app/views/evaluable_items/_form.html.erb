@@ -1,0 +1,25 @@
+<%= form_for([@subject,@evaluable_item]) do |f| %>
+    <% if @evaluable_item.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= t("errors_count",count: @evaluable_item.errors.count) %> <%= t('prohibited_evaluable_item', count: @evaluable_item.errors.count) %></h2>
+
+          <ul>
+            <% @evaluable_item.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :remarks %><br>
+      <%= f.text_area :remarks %>
+    </div>
+    <div class="actions">
+      <%= f.submit ['new','create'].include?(params[:action]) ? t('create_evaluable_item') : t('update_evaluable_item') %>
+    </div>
+<% end %>

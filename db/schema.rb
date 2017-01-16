@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161223105536) do
+ActiveRecord::Schema.define(version: 20170116180957) do
+
+  create_table "evaluable_items", force: true do |t|
+    t.string   "name"
+    t.text     "remarks"
+    t.integer  "subject_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "marks", force: true do |t|
     t.float    "value"
@@ -54,6 +62,7 @@ ActiveRecord::Schema.define(version: 20161223105536) do
     t.datetime "updated_at"
     t.integer  "user_id",    null: false
     t.text     "remarks"
+    t.string   "course"
   end
 
   create_table "users", force: true do |t|

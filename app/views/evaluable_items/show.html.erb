@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t(:name) %>:</strong>
+  <%= @evaluable_item.name %>
+</p>
+
+<p>
+  <strong><%= t('activerecord.attributes.evaluable_item.remarks') %>:</strong>
+  <%= @evaluable_item.remarks %>
+</p>
+
+<p>
+  <strong><%= t('subject') %>:</strong>
+  <%= @evaluable_item.subject.name %>
+</p>
+
+<%= link_to t(:edit), edit_subject_evaluable_item_path(@subject,@evaluable_item) %> |
+<%= link_to t(:back), subject_evaluable_items_path(@subject) %>
