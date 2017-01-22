@@ -1,29 +1,12 @@
-<%= form_for(@mark) do |f| %>
-  <% if @mark.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@mark.errors.count, "error") %> prohibited this mark from being saved:</h2>
+<%= form_tag({controller: 'marks', action: 'update', id: @student.id}, method: :put) %>
 
-      <ul>
-      <% @mark.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<% @evaluable_items.each do |evaluable_item| %>
+    <div class="field">
+      <%= label_tag "values[#{evaluable_item.id}]", evaluable_item.name %><br>
+      <%= number_field_tag "values[#{evaluable_item.id}]", @mark_values[evaluable_item.id], step: 0.01, min: 0.0, max: 10.0 %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :value %><br>
-    <%= f.text_field :value %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :mdate %><br>
-    <%= f.date_select :mdate %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
+<div class="actions">
+  <%= submit_tag t(:update_marks) %>
+</div>
+</form>

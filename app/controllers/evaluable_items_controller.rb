@@ -47,6 +47,6 @@ class EvaluableItemsController < ApplicationController
   end
 
   def evaluable_item_params
-    params.require(:evaluable_item).permit(:name, :remarks)
+    params.require(:evaluable_item).permit(:name, :remarks, :weight)
   end
 end

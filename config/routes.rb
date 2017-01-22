@@ -4,7 +4,6 @@ Notes::Application.routes.draw do
 
   devise_for :users
 
-  resources :marks
 
   resources :subjects do
     member do
@@ -12,6 +11,7 @@ Notes::Application.routes.draw do
       post :cancel
     end
     resources :evaluable_items
+    resources :marks, only: [:edit,:update]
   end
 
   resources :students do

@@ -11,6 +11,7 @@ class SubjectsController < ApplicationController
   # GET /subjects/1.json
   def show
     @students = @subject.students.where(user_id: current_user.id).page(params[:page]).per(10)
+    @evaluable_items = @subject.evaluable_items.includes(:marks)
   end
 
   # GET /subjects/new

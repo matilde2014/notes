@@ -1,6 +1,5 @@
-<h1>Editing mark</h1>
+<h1><%= t(:editing_marks) + " (#{@student.name})" %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @mark %> |
-<%= link_to 'Back', marks_path %>
+<%= link_to t(:back), subject_path(@subject) %>

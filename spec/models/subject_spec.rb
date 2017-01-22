@@ -3,7 +3,8 @@ require 'spec_helper'
 describe Subject do
   #pending "add some examples to (or delete) #{__FILE__}"
   before do
-    @subject = Subject.new(name: 'Programación', hours:200)
+    @user = FactoryGirl.create(:user)
+    @subject = Subject.new(name: 'programming', hours:200, user_id: @user.id)
   end
 
   subject { @subject }
@@ -12,10 +13,10 @@ describe Subject do
   it { should respond_to(:name) }
   it { should respond_to(:hours) }
   it { should respond_to(:remarks) }
-
-  it { should respond_to(:marks) }
+  it { should respond_to(:evaluable_items) }
   it { should respond_to(:students) }
   it { should respond_to(:user) }
+  it { should be_valid }
 
 
   describe "when name is not present" do
@@ -33,4 +34,18 @@ describe Subject do
     it { should_not be_valid }
   end
 
+  describe "when name has taken for the same user" do
+    before do
+      @another_subject = Subject.create(name: 'programming', hours:200, user_id: @user.id)
+    end
+    it { should_not be_valid }
+  end
+
+  describe "when name has taken for a different user" do
+    before do
+      @another_user = FactoryGirl.create(:user)
+      @another_subject = Subject.create(name: 'programming', hours:200, user_id: @another_user.id)
+    end
+    it { should be_valid }
+  end
 end

@@ -1,47 +1,36 @@
 class MarksController < ApplicationController
-  before_action :set_mark, only: [:show, :edit, :update, :destroy]
+  before_action :set_subject
 
   respond_to :html
 
-  def index
-    @marks = Mark.all
-    respond_with(@marks)
-  end
-
-  def show
-    respond_with(@mark)
-  end
-
-  def new
-    @mark = Mark.new
-    respond_with(@mark)
-  end
-
   def edit
-  end
-
-  def create
-    @mark = Mark.new(mark_params)
-    @mark.save
-    respond_with(@mark)
+    @student = Student.find(params[:id])
+    @evaluable_items = @subject.evaluable_items
+    @mark_values = {}
+    @evaluable_items.each do |evaluable_item|
+      mark = Mark.find_by(evaluable_item_id: evaluable_item.id, student_id: @student.id)
+      @mark_values[evaluable_item.id] = mark.value if mark
+    end
   end
 
   def update
-    @mark.update(mark_params)
-    respond_with(@mark)
-  end
-
-  def destroy
-    @mark.destroy
-    respond_with(@mark)
+    @student = Student.find(params[:id])
+    @evaluable_items = @subject.evaluable_items
+    @mark_values = params[:values]
+    @evaluable_items.each do |evaluable_item|
+      if @mark_values[evaluable_item.id.to_s]
+        mark = Mark.find_or_initialize_by(evaluable_item_id: evaluable_item.id, student_id: @student.id)
+        mark.value = @mark_values[evaluable_item.id.to_s].to_f
+        mark.save
+      end
+    end
+    redirect_to subject_path(@subject)
   end
 
   private
-    def set_mark
-      @mark = Mark.find(params[:id])
-    end
 
-    def mark_params
-      params.require(:mark).permit(:value, :description, :mdate)
-    end
+  def set_subject
+    @subject = Subject.find(params[:subject_id])
+  end
+
 end

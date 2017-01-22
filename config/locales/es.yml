@@ -76,6 +76,8 @@ es:
   editing_evaluable_item: Editando elemento evaluable
   evaluable_item_successfullly_created: El elemento evaluable fue creado con éxito.
   evaluable_item_successfullly_updated: El elemento evaluable fue actualizado con éxito.
+  update_marks: "Actualizar notas"
+  editing_marks: "Editando notas"
   views:
     pagination:
       first: "Primera"
@@ -137,6 +139,7 @@ es:
       evaluable_item:
         name: Nombre
         remarks: Observaciones
+        weight: Peso nota
     errors:
       models:
         subject:

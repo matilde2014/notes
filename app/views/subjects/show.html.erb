@@ -32,6 +32,10 @@
         <th></th>
         <th><%= t :name %></th>
         <th><%= t :nif %></th>
+        <% @evaluable_items.each do |evaluable_item| %>
+            <th><%= evaluable_item.name %></th>
+        <% end %>
+        <th><%= t :total %></th>
         <th></th>
       </tr>
       </thead>
@@ -39,9 +43,16 @@
       <tbody>
       <% @students.each do |student| %>
           <tr>
-            <td><%= link_to(image_tag(student.image_url(:thumb)), student) if student.image? %></td>
-            <td><%= link_to student.name, student %></td>
-            <td><%= link_to student.nif, student %></td>
+            <td><%= link_to(image_tag(student.image_url(:thumb)), edit_subject_mark_path(@subject,student)) if student.image? %></td>
+            <td><%= link_to student.name, edit_subject_mark_path(@subject,student) %></td>
+            <td><%= link_to student.nif, edit_subject_mark_path(@subject,student) %></td>
+            <% total = 0.0 %>
+            <% @evaluable_items.each do |evaluable_item| %>
+                <% mark = evaluable_item.marks.find_by_student_id(student.id) %>
+                <% total += mark.value * evaluable_item.weight if mark %>
+                <td><%= mark.value if mark %></td>
+            <% end %>
+            <td><%= total %></td>
             <td><%= link_to t(:unenroll), cancel_subject_path(@subject,student_id: student.id), method: :post %></td>
           </tr>
       <% end %>

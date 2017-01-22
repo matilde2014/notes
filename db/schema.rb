@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116180957) do
+ActiveRecord::Schema.define(version: 20170122175312) do
 
   create_table "evaluable_items", force: true do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20170116180957) do
     t.integer  "subject_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "weight"
   end
 
   create_table "marks", force: true do |t|
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(version: 20170116180957) do
     t.datetime "updated_at"
     t.integer  "student_id"
     t.integer  "subject_id"
+    t.integer  "evaluable_item_id"
   end
 
   create_table "students", force: true do |t|

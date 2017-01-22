@@ -1,7 +1,9 @@
 FactoryGirl.define do
   factory :evaluable_item do
-    name "MyString"
+    sequence(:name) { |n| "evaluable_item#{n}" }
     remarks "MyText"
-    subject_id 1
+    weight 0.5
+
+    subject
   end
 end
