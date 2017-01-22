@@ -19,17 +19,14 @@ ActiveRecord::Schema.define(version: 20170122175312) do
     t.integer  "subject_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "weight"
+    t.float    "weight",     default: 0.0
   end
 
   create_table "marks", force: true do |t|
     t.float    "value"
-    t.string   "description"
-    t.date     "mdate"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "student_id"
-    t.integer  "subject_id"
     t.integer  "evaluable_item_id"
   end
 
