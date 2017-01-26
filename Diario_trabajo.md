@@ -58,7 +58,7 @@ rvm current
 history
 bundle install --without production
 
-##2. Martes 5 de julio
+##2. Martes 5 de julioREADME
 
 ###Para probar los test que ha generado en el fichero students_controller_spec.rb
 rspec spec/controllers/
