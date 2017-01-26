@@ -1,6 +1,5 @@
 Notes::Application.routes.draw do
 
-  resources :students2s
 
   devise_for :users
 
