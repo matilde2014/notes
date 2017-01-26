@@ -18,7 +18,7 @@ $ rspec spec/
 ```
 
 ##1. Lunes 4 de Julio
-### Pedir documentaión para ampliar el plazo el proyecto
+### Pedir documentaición para ampliar el plazo el proyecto
 
 ###Instalación del Kile
 sudo apt install kile
